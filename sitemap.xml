@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bferg314.github.io/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/Articles/AI%20Assisted%20Mindscapes/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/Articles/Cyclical%20vs%20Linear%20Time/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/Articles/The%20History%20of%20Endurance%20Running/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
-         <loc>https://bferg314.github.io/Guides/mkDocs%20Gettings%20Started/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <loc>https://bferg314.github.io/Guides/My%20mkDocs%20Setup/</loc>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/2024/11/05/begin-again/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/blog/2024/11/08/fun-with-next-steps/</loc>
+         <lastmod>2024-11-08</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-11-05</lastmod>
+         <lastmod>2024-11-08</lastmod>
     </url>
 </urlset>
