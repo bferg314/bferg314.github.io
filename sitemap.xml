@@ -2,46 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bferg314.github.io/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/2024/11/05/begin-again/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/2024/11/12/fun-with-next-steps/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/blog/2024/11/13/creative-agency/</loc>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/guide/ai-assisted-mindscapes/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/guide/my-mkdocs-setup/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/writing/make-believe/the-lair-of-the-dragon-king/</loc>
-         <lastmod>2024-11-12</lastmod>
-    </url>
-    <url>
-         <loc>https://bferg314.github.io/writing/reality/The%20History%20of%20Endurance%20Running/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/writing/reality/cyclical-vs-linear-time/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/writing/reality/history-of-endurance-running/</loc>
+         <lastmod>2024-11-13</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/writing/reality/shades-of-creative-agency/</loc>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
     <url>
          <loc>https://bferg314.github.io/tags/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-13</lastmod>
     </url>
 </urlset>
