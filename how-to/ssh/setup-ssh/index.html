@@ -6,30 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="A comprehensive guide for setting up and using SSH keys across Windows, Linux, and WSL">
       
       
-        <link rel="canonical" href="https://bferg314.github.io/blog/2024/11/22/reading-sapiens/">
+      
+        <link rel="canonical" href="https://bferg314.github.io/how-to/ssh/setup-ssh/">
       
       
-        <link rel="prev" href="../../13/creative-agency/">
+        <link rel="prev" href="../../ranger/setup-ranger/">
       
       
-        <link rel="next" href="../../27/is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation/">
+        <link rel="next" href="../../../writing/fiction/other-way-around/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>Reading Sapiens - Bryan's knowledge base</title>
+        <title>Creating and Using SSH Keys - Bryan's knowledge base</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-sapiens" class="md-skip">
+        <a href="#creating-and-using-ssh-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Sapiens
+              Creating and Using SSH Keys
             
           </span>
         </div>
@@ -214,9 +216,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,19 +280,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -306,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -317,14 +315,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../creations/code/" class="md-nav__link">
+      <a href="../../../creations/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,17 +497,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -525,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How to
@@ -574,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ai/assisted-mindscapes/" class="md-nav__link">
+      <a href="../../ai/assisted-mindscapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/certs/localCACerts/" class="md-nav__link">
+      <a href="../../certs/localCACerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/folder-setup/" class="md-nav__link">
+      <a href="../../docker/folder-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-linux/" class="md-nav__link">
+      <a href="../../docker/on-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-windows/" class="md-nav__link">
+      <a href="../../docker/on-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/formatting/" class="md-nav__link">
+      <a href="../../linux/disks/formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/types/" class="md-nav__link">
+      <a href="../../linux/disks/types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
+      <a href="../../linux/samba/setup-samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/setup-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ranger/setup-ranger/" class="md-nav__link">
+      <a href="../../ranger/setup-ranger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,17 +1088,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
         
           
           <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
@@ -1114,7 +1114,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             Ssh
@@ -1125,10 +1125,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../how-to/ssh/setup-ssh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating and Using SSH Keys
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1137,6 +1157,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an SSH Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-ssh-key-to-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding the SSH Key to the Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding the SSH Key to the Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-your-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssh-keys-for-remote-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SSH Keys for Remote Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using SSH Keys for Remote Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-your-key-to-a-remote-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Key to a Remote Host
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1234,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/other-way-around/" class="md-nav__link">
+      <a href="../../../writing/fiction/other-way-around/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-clockmaker/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-clockmaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
+      <a href="../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
+      <a href="../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
+      <a href="../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
+      <a href="../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,8 +1667,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1539,6 +1679,116 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an SSH Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-ssh-key-to-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding the SSH Key to the Agent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding the SSH Key to the Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-your-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssh-keys-for-remote-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SSH Keys for Remote Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using SSH Keys for Remote Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-your-key-to-a-remote-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Your Key to a Remote Host
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsl-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1546,69 +1796,203 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-11-22 00:00:00+00:00" class="md-ellipsis">November 22, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../tags/#guides" class="md-tag">guides</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#ssh" class="md-tag">ssh</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#configuration" class="md-tag">configuration</a>
+    
+  
+</nav>
 
 
-<h1 id="reading-sapiens">Reading Sapiens</h1>
-<p>I am currently reading Sapiens, by <a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> and it is quite enlightening. I have never thought about human history on these levels and it has sparked quite a few thought experiments. Like <a href="../../../../../writing/ideas/the-5-human-domestications/">what if humans came across other scenarios similar to the agricultural revolution</a>? <a href="../../../../../writing/ideas/the-5-life-forms/">What other life forms could be possible</a>? Looking forward to the rest of his books too!</p>
-<p>I also added an ai-assisted tag to all the things that I worked with AI on. Not like anybody will ever see this stuff, but I guess some sort of transparency is good.</p>
+
+<h1 id="creating-and-using-ssh-keys">Creating and Using SSH Keys</h1>
+<div class="admonition note">
+<p class="admonition-title">Windows-Specific Notes</p>
+<ul>
+<li>Most commands can be run in PowerShell, but ensure you have OpenSSH installed</li>
+<li>Windows uses backslashes (<code>\</code>) in paths, but use forward slashes (<code>/</code>) in WSL and Git Bash</li>
+<li>Some commands may require running PowerShell as administrator</li>
+</ul>
+</div>
+<h2 id="creating-an-ssh-key">Creating an SSH Key</h2>
+<ol>
+<li>
+<p>Open any Linux Terminal, PowerShell, or Windows Terminal</p>
+</li>
+<li>
+<p>Generate a new SSH key pair:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>When prompted, press <code>Enter</code> to accept the default path (<code>~/.ssh/id_ed25519</code>) or specify a custom path</p>
+</li>
+<li>
+<p>Optionally set a passphrase when prompted</p>
+</li>
+<li>
+<p>Verify your keys in the <code>.ssh</code> directory:</p>
+<ul>
+<li>Public key: <code>~/.ssh/id_ed25519.pub</code></li>
+<li>Private key: <code>~/.ssh/id_ed25519</code></li>
+</ul>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Why ed25519?</p>
+<ul>
+<li><strong>Enhanced Security</strong>: Stronger cryptography with smaller keys than RSA</li>
+<li><strong>Better Performance</strong>: Faster key operations than older algorithms</li>
+<li><strong>Compact</strong>: Smaller key sizes ideal for storage</li>
+<li><strong>Modern Design</strong>: Built on elliptic curve cryptography</li>
+</ul>
+</div>
+<h2 id="adding-the-ssh-key-to-the-agent">Adding the SSH Key to the Agent</h2>
+<h3 id="windows-setup">Windows Setup</h3>
+<div class="admonition example">
+<p class="admonition-title">PowerShell (As Administrator)</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">ssh-agent</span> <span class="n">-StartupType</span> <span class="n">Automatic</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Start-Service</span> <span class="n">ssh-agent</span>
+</span></code></pre></div>
+</div>
+<h3 id="linux-setup">Linux Setup</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<h3 id="adding-your-key">Adding Your Key</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ssh-add</span> <span class="nv">$env:USERPROFILE</span><span class="p">/.</span><span class="n">ssh</span><span class="p">/</span><span class="n">id_ed25519</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Verify the key is loaded:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh-add<span class="w"> </span>-l
+</span></code></pre></div></p>
+<h2 id="using-ssh-keys-for-remote-connections">Using SSH Keys for Remote Connections</h2>
+<h3 id="adding-your-key-to-a-remote-host">Adding Your Key to a Remote Host</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Using ssh-copy-id (WSL/Linux)</label><label for="__tabbed_2_2">Manual Setup (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh-copy-id<span class="w"> </span>user@remote-host
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Copy your public key:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</span></code></pre></div></li>
+<li>On the remote server:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PASTE_YOUR_PUBLIC_KEY_HERE&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/authorized_keys
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</span></code></pre></div></li>
+</ol>
+</div>
+</div>
+</div>
+<p>Test your connection:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ssh<span class="w"> </span>user@remote-host
+</span></code></pre></div></p>
+<h2 id="github-configuration">GitHub Configuration</h2>
+<ol>
+<li>
+<p>Copy your public key:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Add it to GitHub:</p>
+<ul>
+<li>Go to <strong>Settings &gt; SSH and GPG keys</strong></li>
+<li>Click <strong>New SSH Key</strong></li>
+<li>Paste and save</li>
+</ul>
+</li>
+<li>
+<p>Test GitHub connection:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Configure Git repository:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:username/repository.git
+</span></code></pre></div></p>
+</li>
+</ol>
+<h2 id="wsl-integration">WSL Integration</h2>
+<ol>
+<li>
+<p>Link Windows SSH directory:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>/mnt/c/Users/&lt;YourUsername&gt;/.ssh<span class="w"> </span>~/.ssh
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Set proper permissions:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_ed25519
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</span></code></pre></div></p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Permission Requirements</p>
+<p>SSH requires strict file permissions for security:</p>
+<ul>
+<li><code>700</code> for <code>.ssh</code> directory: only you can access</li>
+<li><code>600</code> for key files: only you can read/write</li>
+</ul>
+</div>
+<ol>
+<li>Configure WSL SSH agent:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="k">)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+</span></code></pre></div></li>
+</ol>
+<h2 id="best-practices">Best Practices</h2>
+<div class="admonition tip">
+<p class="admonition-title">SSH Configuration</p>
+<p>Create <code>~/.ssh/config</code> to manage multiple keys:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Host<span class="w"> </span>github.com
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span>User<span class="w"> </span>git
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
+</span></code></pre></div></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Security Tips</p>
+<ul>
+<li>Back up your private key securely</li>
+<li>Use different keys for different purposes</li>
+<li>Always protect private keys with strong permissions</li>
+<li>Consider using a passphrase for sensitive keys</li>
+</ul>
+</div>
 
 
 
@@ -1629,7 +2013,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2025</span>
   </span>
 
     
@@ -1640,14 +2024,12 @@
 
 
 
-  
 
 
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1678,12 +2060,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../../../js/open_in_new_tab.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
       
     
   </body>

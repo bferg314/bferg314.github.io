@@ -6,30 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Comprehensive guide for partitioning and formatting disks in Linux">
       
       
-        <link rel="canonical" href="https://bferg314.github.io/blog/2024/11/22/reading-sapiens/">
+      
+        <link rel="canonical" href="https://bferg314.github.io/how-to/linux/disks/formatting/">
       
       
-        <link rel="prev" href="../../13/creative-agency/">
+        <link rel="prev" href="../../../docker/on-windows/">
       
       
-        <link rel="next" href="../../27/is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation/">
+        <link rel="next" href="../types/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>Reading Sapiens - Bryan's knowledge base</title>
+        <title>Linux Disk Formatting Guide - Bryan's knowledge base</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-sapiens" class="md-skip">
+        <a href="#disk-formatting-in-linux" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Sapiens
+              Linux Disk Formatting Guide
             
           </span>
         </div>
@@ -214,9 +216,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,19 +280,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -306,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -317,14 +315,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2025/" class="md-nav__link">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../creations/code/" class="md-nav__link">
+      <a href="../../../../creations/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,17 +497,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -525,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How to
@@ -574,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ai/assisted-mindscapes/" class="md-nav__link">
+      <a href="../../../ai/assisted-mindscapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/certs/localCACerts/" class="md-nav__link">
+      <a href="../../../certs/localCACerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/folder-setup/" class="md-nav__link">
+      <a href="../../../docker/folder-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-linux/" class="md-nav__link">
+      <a href="../../../docker/on-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-windows/" class="md-nav__link">
+      <a href="../../../docker/on-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,17 +768,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -794,7 +794,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -805,17 +805,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
@@ -829,7 +831,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4_1">
             <span class="md-nav__icon md-icon"></span>
             Disks
@@ -840,10 +842,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/formatting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux Disk Formatting Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -852,6 +874,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifying-your-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Your Disk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partitioning Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Filesystems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mounting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporary-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Mount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanent-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permanent Mount
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-mount-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Mount Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -864,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/types/" class="md-nav__link">
+      <a href="../types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
+      <a href="../../samba/setup-samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
+      <a href="../../../mkdocs/setup-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ranger/setup-ranger/" class="md-nav__link">
+      <a href="../../../ranger/setup-ranger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ssh/setup-ssh/" class="md-nav__link">
+      <a href="../../../ssh/setup-ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/other-way-around/" class="md-nav__link">
+      <a href="../../../../writing/fiction/other-way-around/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-clockmaker/" class="md-nav__link">
+      <a href="../../../../writing/fiction/the-clockmaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
+      <a href="../../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
+      <a href="../../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
+      <a href="../../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
+      <a href="../../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
+      <a href="../../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
+      <a href="../../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
+      <a href="../../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,8 +1669,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1539,6 +1681,116 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identifying-your-disk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Your Disk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partitioning Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Partitioning Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Filesystems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mounting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporary-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary Mount
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanent-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permanent Mount
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-mount-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Mount Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1546,69 +1798,281 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-11-22 00:00:00+00:00" class="md-ellipsis">November 22, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../../tags/#linux" class="md-tag">linux</a>
+    
+  
+    
+    
+    
+      <a href="../../../../tags/#storage" class="md-tag">storage</a>
+    
+  
+    
+    
+    
+      <a href="../../../../tags/#disks" class="md-tag">disks</a>
+    
+  
+    
+    
+    
+      <a href="../../../../tags/#formatting" class="md-tag">formatting</a>
+    
+  
+</nav>
 
 
-<h1 id="reading-sapiens">Reading Sapiens</h1>
-<p>I am currently reading Sapiens, by <a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> and it is quite enlightening. I have never thought about human history on these levels and it has sparked quite a few thought experiments. Like <a href="../../../../../writing/ideas/the-5-human-domestications/">what if humans came across other scenarios similar to the agricultural revolution</a>? <a href="../../../../../writing/ideas/the-5-life-forms/">What other life forms could be possible</a>? Looking forward to the rest of his books too!</p>
-<p>I also added an ai-assisted tag to all the things that I worked with AI on. Not like anybody will ever see this stuff, but I guess some sort of transparency is good.</p>
+
+<h1 id="disk-formatting-in-linux">Disk Formatting in Linux</h1>
+<div class="admonition danger">
+<p class="admonition-title">Data Loss Warning</p>
+<ul>
+<li>All commands in this guide can result in <strong>permanent data loss</strong></li>
+<li>Always backup important data before proceeding</li>
+<li>Double-check device names (e.g., <code>nvme0n1</code>, <code>sda</code>)</li>
+<li>Commands require root privileges</li>
+<li>If unsure, consult a system administrator</li>
+</ul>
+</div>
+<h2 id="identifying-your-disk">Identifying Your Disk</h2>
+<ol>
+<li>
+<p>List all block devices:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>lsblk
+</span></code></pre></div></p>
+<p>Example output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sda           8:0    0 931.5G  0 disk
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>└─sda1        8:1    0 931.5G  0 part /
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>nvme0n1     259:0    0 476.9G  0 disk
+</span></code></pre></div></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Device Naming</p>
+<ul>
+<li><code>sdX</code>: SATA/USB drives</li>
+<li><code>nvmeXnY</code>: NVMe drives</li>
+<li><code>mmcblkX</code>: SD cards/eMMC storage</li>
+</ul>
+</div>
+<h2 id="partitioning-tools">Partitioning Tools</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">cfdisk (TUI)</label><label for="__tabbed_1_2">fdisk (MBR/DOS)</label><label for="__tabbed_1_3">gdisk (GPT)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Features</p>
+<ul>
+<li>Terminal UI with menu-driven interface</li>
+<li>Supports both MBR and GPT</li>
+<li>Easier to use than fdisk/gdisk</li>
+<li>Automatic partition alignment</li>
+</ul>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>cfdisk<span class="w"> </span>/dev/sdX
+</span></code></pre></div>
+<p>Navigation:</p>
+<ul>
+<li>Arrow keys - move selection</li>
+<li>Enter - select option</li>
+<li>[New] - create partition</li>
+<li>[Delete] - remove partition</li>
+<li>[Type] - change partition type</li>
+<li>[Write] - save changes</li>
+<li>[Quit] - exit</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Usage Tips</p>
+<ul>
+<li>Space bar selects bootable flag</li>
+<li>Select [Write] then type "yes" to confirm changes</li>
+<li>Always [Quit] properly to ensure changes are saved</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Features</p>
+<ul>
+<li>Traditional MBR partitioning</li>
+<li>Up to 2TB disk size</li>
+<li>Maximum 4 primary partitions</li>
+<li>Legacy BIOS systems</li>
+</ul>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>fdisk<span class="w"> </span>/dev/sdX
+</span></code></pre></div>
+<p>Common commands:</p>
+<ul>
+<li><code>d</code> - delete partition</li>
+<li><code>n</code> - new partition</li>
+<li><code>p</code> - print partition table</li>
+<li><code>w</code> - write changes</li>
+<li><code>q</code> - quit without saving</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Features</p>
+<ul>
+<li>Modern GPT partitioning</li>
+<li>Unlimited disk size</li>
+<li>Up to 128 partitions</li>
+<li>Required for UEFI</li>
+<li>Includes backup partition table</li>
+</ul>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>gdisk<span class="w"> </span>/dev/sdX
+</span></code></pre></div>
+<p>Common commands:</p>
+<ul>
+<li><code>n</code> - new partition</li>
+<li><code>d</code> - delete partition</li>
+<li><code>l</code> - list known types</li>
+<li><code>t</code> - change type</li>
+<li><code>w</code> - write changes</li>
+<li><code>q</code> - quit</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Choosing a Partitioning Tool</p>
+<ul>
+<li><strong>cfdisk</strong>: Easiest to use, good for beginners</li>
+<li><strong>fdisk</strong>: Traditional CLI tool, great for scripting</li>
+<li><strong>gdisk</strong>: Modern GPT-focused tool with advanced features</li>
+</ul>
+</div>
+<h3 id="partition-types">Partition Types</h3>
+<div class="admonition example">
+<p class="admonition-title">Common GPT Partition Types</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>8300 - Linux filesystem
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>8200 - Linux swap
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ef00 - EFI System
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>fd00 - Linux RAID
+</span></code></pre></div>
+</div>
+<h2 id="creating-filesystems">Creating Filesystems</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ext4</label><label for="__tabbed_2_2">btrfs</label><label for="__tabbed_2_3">xfs</label><label for="__tabbed_2_4">exFAT</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/sdX1
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># With label</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>-L<span class="w"> </span>mydata<span class="w"> </span>/dev/sdX1
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>mkfs.btrfs<span class="w"> </span>/dev/sdX1
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># With compression</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>sudo<span class="w"> </span>mkfs.btrfs<span class="w"> </span>-L<span class="w"> </span>mydata<span class="w"> </span>--compress<span class="w"> </span>zstd<span class="w"> </span>/dev/sdX1
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>mkfs.xfs<span class="w"> </span>/dev/sdX1
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># With label</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>sudo<span class="w"> </span>mkfs.xfs<span class="w"> </span>-L<span class="w"> </span>mydata<span class="w"> </span>/dev/sdX1
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Install tools first</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>exfat-fuse<span class="w"> </span>exfat-utils<span class="w">     </span><span class="c1"># Debian/Ubuntu</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>exfat-utils<span class="w"> </span>fuse-exfat<span class="w">     </span><span class="c1"># Fedora</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>exfatprogs<span class="w">                   </span><span class="c1"># Arch</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Format</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>sudo<span class="w"> </span>mkfs.exfat<span class="w"> </span>-n<span class="w"> </span>mydata<span class="w"> </span>/dev/sdX1
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="mounting">Mounting</h2>
+<h3 id="temporary-mount">Temporary Mount</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/mydisk
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>mount<span class="w"> </span>/dev/sdX1<span class="w"> </span>/mnt/mydisk
+</span></code></pre></div>
+<h3 id="permanent-mount">Permanent Mount</h3>
+<ol>
+<li>
+<p>Get partition UUID:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>blkid<span class="w"> </span>/dev/sdX1
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Edit <code>/etc/fstab</code>:
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Add line:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">UUID</span><span class="o">=</span>your-uuid-here<span class="w">  </span>/mount/point<span class="w">  </span>filesystem<span class="w">  </span>options<span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">2</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">ext4 Options</label><label for="__tabbed_3_2">btrfs Options</label><label for="__tabbed_3_3">exFAT Options</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>UUID=1234-5678 /mnt/data ext4 defaults,noatime 0 2
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>UUID=1234-5678 /mnt/data btrfs defaults,compress=zstd 0 0
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>UUID=1234-5678 /mnt/data exfat uid=1000,gid=1000,dmask=022,fmask=133 0 0
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="post-mount-setup">Post-Mount Setup</h2>
+<div class="admonition example">
+<p class="admonition-title">Setting Permissions</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Single user</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:<span class="nv">$USER</span><span class="w"> </span>/mnt/mydisk
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Group access</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>:groupname<span class="w"> </span>/mnt/mydisk
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">775</span><span class="w"> </span>/mnt/mydisk
+</span></code></pre></div>
+</div>
+<h2 id="quick-reference">Quick Reference</h2>
+<div class="admonition tip">
+<p class="admonition-title">Common Commands</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># List disks</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>lsblk
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>fdisk<span class="w"> </span>-l
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Check filesystem</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>fsck<span class="w"> </span>/dev/sdX1
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1"># Show UUID</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>blkid
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="c1"># Show mount points</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>df<span class="w"> </span>-h
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>findmnt
+</span></code></pre></div>
+</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="admonition warning">
+<p class="admonition-title">Common Issues</p>
+<ul>
+<li><strong>Mount Failed</strong>: Check filesystem type and mount options</li>
+<li><strong>Permission Denied</strong>: Verify ownership and permissions</li>
+<li><strong>Disk Not Found</strong>: Check if disk is recognized in <code>dmesg</code></li>
+<li><strong>Cannot Format</strong>: Ensure partition isn't mounted</li>
+</ul>
+</div>
 
 
 
@@ -1629,7 +2093,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2025</span>
   </span>
 
     
@@ -1640,14 +2104,12 @@
 
 
 
-  
 
 
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1678,12 +2140,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../../../js/open_in_new_tab.js"></script>
+        <script src="../../../../js/open_in_new_tab.js"></script>
       
     
   </body>

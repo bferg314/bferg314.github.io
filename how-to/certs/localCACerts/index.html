@@ -6,30 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Guide for creating and managing local CA certificates for home server applications">
       
       
-        <link rel="canonical" href="https://bferg314.github.io/blog/2024/11/22/reading-sapiens/">
+      
+        <link rel="canonical" href="https://bferg314.github.io/how-to/certs/localCACerts/">
       
       
-        <link rel="prev" href="../../13/creative-agency/">
+        <link rel="prev" href="../../ai/assisted-mindscapes/">
       
       
-        <link rel="next" href="../../27/is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation/">
+        <link rel="next" href="../../docker/folder-setup/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>Reading Sapiens - Bryan's knowledge base</title>
+        <title>Setting up Local CA Certificates - Bryan's knowledge base</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-sapiens" class="md-skip">
+        <a href="#local-certificate-authority-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Sapiens
+              Setting up Local CA Certificates
             
           </span>
         </div>
@@ -214,9 +216,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,19 +280,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -306,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -317,14 +315,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../creations/code/" class="md-nav__link">
+      <a href="../../../creations/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,17 +497,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -525,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How to
@@ -574,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ai/assisted-mindscapes/" class="md-nav__link">
+      <a href="../../ai/assisted-mindscapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,17 +598,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -624,7 +624,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Certs
@@ -635,10 +635,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../how-to/certs/localCACerts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setting up Local CA Certificates
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -647,6 +667,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssl-certificate-maker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SSL-Certificate-Maker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using SSL-Certificate-Maker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-certificate-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your Certificate Authority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-required-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Required Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-ca-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the CA Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-server-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Server Certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -702,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/folder-setup/" class="md-nav__link">
+      <a href="../../docker/folder-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-linux/" class="md-nav__link">
+      <a href="../../docker/on-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-windows/" class="md-nav__link">
+      <a href="../../docker/on-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/formatting/" class="md-nav__link">
+      <a href="../../linux/disks/formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/types/" class="md-nav__link">
+      <a href="../../linux/disks/types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
+      <a href="../../linux/samba/setup-samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/setup-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ranger/setup-ranger/" class="md-nav__link">
+      <a href="../../ranger/setup-ranger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ssh/setup-ssh/" class="md-nav__link">
+      <a href="../../ssh/setup-ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/other-way-around/" class="md-nav__link">
+      <a href="../../../writing/fiction/other-way-around/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-clockmaker/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-clockmaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
+      <a href="../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
+      <a href="../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
+      <a href="../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
+      <a href="../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,8 +1643,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1539,6 +1655,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-ssl-certificate-maker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SSL-Certificate-Maker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using SSL-Certificate-Maker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-certificate-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your Certificate Authority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-required-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Required Formats
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-ca-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the CA Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-server-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Server Certificates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1546,69 +1748,155 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-11-22 00:00:00+00:00" class="md-ellipsis">November 22, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../tags/#certificates" class="md-tag">certificates</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#security" class="md-tag">security</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#ssl" class="md-tag">ssl</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#networking" class="md-tag">networking</a>
+    
+  
+</nav>
 
 
-<h1 id="reading-sapiens">Reading Sapiens</h1>
-<p>I am currently reading Sapiens, by <a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> and it is quite enlightening. I have never thought about human history on these levels and it has sparked quite a few thought experiments. Like <a href="../../../../../writing/ideas/the-5-human-domestications/">what if humans came across other scenarios similar to the agricultural revolution</a>? <a href="../../../../../writing/ideas/the-5-life-forms/">What other life forms could be possible</a>? Looking forward to the rest of his books too!</p>
-<p>I also added an ai-assisted tag to all the things that I worked with AI on. Not like anybody will ever see this stuff, but I guess some sort of transparency is good.</p>
+
+<h1 id="local-certificate-authority-setup">Local Certificate Authority Setup</h1>
+<div class="admonition info">
+<p class="admonition-title">Alternative Approach</p>
+<p>While solutions like <a href="https://www.youtube.com/watch?v=qlcVx-k-02E">Let's Encrypt with DNS Challenge</a> work, 
+they can be slow to resolve on internal networks. For small home setups, a local CA is often more efficient.</p>
+</div>
+<h2 id="using-ssl-certificate-maker">Using SSL-Certificate-Maker</h2>
+<div class="admonition tip">
+<p class="admonition-title">Simplified Process</p>
+<p>We'll use <a href="https://github.com/bp2008/SSL-Certificate-Maker">SSL-Certificate-Maker</a> to simplify the certificate creation process.</p>
+</div>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Download the latest release from the <a href="https://github.com/bp2008/SSL-Certificate-Maker">SSL-Certificate-Maker GitHub repository</a></li>
+<li>Extract the files to a convenient location</li>
+<li>Run <code>SSL-Certificate-Maker.exe</code></li>
+</ol>
+<h3 id="creating-your-certificate-authority">Creating Your Certificate Authority</h3>
+<ol>
+<li>Navigate to the "Create CA" tab</li>
+<li>Fill in the CA details:<ul>
+<li><strong>Name</strong>: Choose a personal identifier (e.g., "HomeLabCA")</li>
+<li><strong>Validity Period</strong>: Recommended 10+ years for home use</li>
+<li><strong>Key Size</strong>: 4096 recommended for CA</li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Save your CA files securely - you'll need them to create additional certificates later.</p>
+</div>
+<h3 id="generate-required-formats">Generate Required Formats</h3>
+<ol>
+<li>
+<p>Use the "Convert" button in the top-left to create:</p>
+<ul>
+<li><code>.cer</code> - Base certificate</li>
+<li><code>.key</code> - Private key</li>
+<li><code>.pfx</code> - Windows format</li>
+</ul>
+</li>
+<li>
+<p>Create <code>.crt</code> format for Linux systems:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-inform<span class="w"> </span>PEM<span class="w"> </span>-in<span class="w"> </span>certificate.cer<span class="w"> </span>-out<span class="w"> </span>certificate.crt
+</span></code></pre></div></p>
+</li>
+</ol>
+<h3 id="installing-the-ca-certificate">Installing the CA Certificate</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Linux</label><label for="__tabbed_1_3">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Double-click the <code>.pfx</code> file</li>
+<li>Follow the Certificate Import Wizard</li>
+<li>Select "Trusted Root Certification Authorities"</li>
+<li>Complete the import process</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Copy the <code>.crt</code> file to the proper location:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>certificate.crt<span class="w"> </span>/usr/local/share/ca-certificates/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>update-ca-certificates
+</span></code></pre></div></li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Double-click the <code>.cer</code> file</li>
+<li>Add to System Keychain</li>
+<li>Set to "Always Trust"</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="creating-server-certificates">Creating Server Certificates</h2>
+<ol>
+<li>In SSL-Certificate-Maker, go to "Create Cert" tab</li>
+<li>Select your CA from the dropdown</li>
+<li>Configure the certificate:
+    <div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">Common Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yourserver.local</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">Alt Names</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yourserver.local</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="err">*</span><span class="l l-Scalar l-Scalar-Plain">.yourserver.local</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.x</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">Validity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5 years</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nt">Key Size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
+</span></code></pre></div></li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example Server Config</p>
+<div class="language-nginx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">ssl_certificate</span><span class="w"> </span><span class="s">/path/to/server.crt</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">ssl_certificate_key</span><span class="w"> </span><span class="s">/path/to/server.key</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="admonition warning">
+<p class="admonition-title">Common Issues</p>
+<ul>
+<li><strong>Certificate Not Trusted</strong>: Ensure CA is properly installed in root store</li>
+<li><strong>Name Mismatch</strong>: Verify hostname matches certificate's Common Name or SAN</li>
+<li><strong>Chain Issues</strong>: Include full certificate chain if required</li>
+</ul>
+</div>
+<h2 id="security-considerations">Security Considerations</h2>
+<div class="admonition danger">
+<p class="admonition-title">Important Security Notes</p>
+<ul>
+<li>Store CA private key securely</li>
+<li>Limit CA certificate validity period</li>
+<li>Use strong key sizes (4096 for CA, 2048+ for servers)</li>
+<li>Maintain a certificate inventory</li>
+</ul>
+</div>
 
 
 
@@ -1629,7 +1917,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2025</span>
   </span>
 
     
@@ -1640,14 +1928,12 @@
 
 
 
-  
 
 
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1678,12 +1964,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../../../js/open_in_new_tab.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
       
     
   </body>

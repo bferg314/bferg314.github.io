@@ -6,30 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Guide for creating an organized Docker directory structure for home server applications">
       
       
-        <link rel="canonical" href="https://bferg314.github.io/blog/2024/11/22/reading-sapiens/">
+      
+        <link rel="canonical" href="https://bferg314.github.io/how-to/docker/folder-setup/">
       
       
-        <link rel="prev" href="../../13/creative-agency/">
+        <link rel="prev" href="../../certs/localCACerts/">
       
       
-        <link rel="next" href="../../27/is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation/">
+        <link rel="next" href="../on-linux/">
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>Reading Sapiens - Bryan's knowledge base</title>
+        <title>Docker Directory Structure Setup - Bryan's knowledge base</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-sapiens" class="md-skip">
+        <a href="#docker-directory-structure-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Sapiens
+              Docker Directory Structure Setup
             
           </span>
         </div>
@@ -214,9 +216,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -225,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -263,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tags/" class="md-nav__link">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,19 +280,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -306,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -317,14 +315,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -382,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2025/" class="md-nav__link">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../creations/code/" class="md-nav__link">
+      <a href="../../../creations/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,17 +497,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -525,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             How to
@@ -574,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ai/assisted-mindscapes/" class="md-nav__link">
+      <a href="../../ai/assisted-mindscapes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/certs/localCACerts/" class="md-nav__link">
+      <a href="../../certs/localCACerts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,17 +662,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -688,7 +688,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -699,10 +699,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/folder-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker Directory Structure Setup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -711,6 +731,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Purposes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-drive-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Drive Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -723,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-linux/" class="md-nav__link">
+      <a href="../on-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/docker/on-windows/" class="md-nav__link">
+      <a href="../on-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/formatting/" class="md-nav__link">
+      <a href="../../linux/disks/formatting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/disks/types/" class="md-nav__link">
+      <a href="../../linux/disks/types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
+      <a href="../../linux/samba/setup-samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/setup-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ranger/setup-ranger/" class="md-nav__link">
+      <a href="../../ranger/setup-ranger/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../how-to/ssh/setup-ssh/" class="md-nav__link">
+      <a href="../../ssh/setup-ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/other-way-around/" class="md-nav__link">
+      <a href="../../../writing/fiction/other-way-around/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-clockmaker/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-clockmaker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
+      <a href="../../../writing/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1340,7 +1443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-human-domestications/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1361,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
+      <a href="../../../writing/ideas/the-5-life-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
+      <a href="../../../writing/reality/cyclical-vs-linear-time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
+      <a href="../../../writing/reality/history-of-endurance-running/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
+      <a href="../../../writing/reality/shades-of-creative-agency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
+      <a href="../../../writing/reality/the-joy-of-creating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,8 +1628,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1539,6 +1640,77 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-purposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Purposes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-drive-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Drive Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1546,69 +1718,179 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-11-22 00:00:00+00:00" class="md-ellipsis">November 22, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../../tags/#docker" class="md-tag">docker</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#organization" class="md-tag">organization</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#setup" class="md-tag">setup</a>
+    
+  
+    
+    
+    
+      <a href="../../../tags/#linux" class="md-tag">linux</a>
+    
+  
+</nav>
 
 
-<h1 id="reading-sapiens">Reading Sapiens</h1>
-<p>I am currently reading Sapiens, by <a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> and it is quite enlightening. I have never thought about human history on these levels and it has sparked quite a few thought experiments. Like <a href="../../../../../writing/ideas/the-5-human-domestications/">what if humans came across other scenarios similar to the agricultural revolution</a>? <a href="../../../../../writing/ideas/the-5-life-forms/">What other life forms could be possible</a>? Looking forward to the rest of his books too!</p>
-<p>I also added an ai-assisted tag to all the things that I worked with AI on. Not like anybody will ever see this stuff, but I guess some sort of transparency is good.</p>
+
+<h1 id="docker-directory-structure-setup">Docker Directory Structure Setup</h1>
+<div class="admonition info">
+<p class="admonition-title">Purpose</p>
+<p>Creating a well-organized directory structure for Docker applications helps maintain a clean and manageable home server environment.</p>
+</div>
+<h2 id="directory-overview">Directory Overview</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/docker/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├──<span class="w"> </span>appdata/<span class="w">       </span><span class="c1"># Container configurations</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──<span class="w"> </span>media/<span class="w">         </span><span class="c1"># Media files</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│<span class="w">   </span>├──<span class="w"> </span>tv/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│<span class="w">   </span>├──<span class="w"> </span>movies/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│<span class="w">   </span>├──<span class="w"> </span>books/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│<span class="w">   </span>├──<span class="w"> </span>audiobooks/
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│<span class="w">   </span>└──<span class="w"> </span>extdisks/
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├──<span class="w"> </span>downloads/<span class="w">     </span><span class="c1"># Download management</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│<span class="w">   </span>├──<span class="w"> </span>complete/
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│<span class="w">   </span>└──<span class="w"> </span>incomplete/
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└──<span class="w"> </span>drives/<span class="w">        </span><span class="c1"># Mounted external drives</span>
+</span></code></pre></div>
+<h2 id="directory-purposes">Directory Purposes</h2>
+<div class="admonition example">
+<p class="admonition-title">Directory Usage</p>
+<ul>
+<li><strong>appdata</strong>: Store container configurations and persistent data</li>
+<li><strong>media</strong>: Organize different types of media content</li>
+<li><strong>downloads</strong>: Manage download states and organization</li>
+<li><strong>drives</strong>: Mount point for external storage devices</li>
+</ul>
+</div>
+<h2 id="permissions-setup">Permissions Setup</h2>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Ensure correct permissions for Docker containers:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w">  </span><span class="c1"># Your user ID</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w">  </span><span class="c1"># Your group ID</span>
+</span></code></pre></div>
+<p>Check your IDs with:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>id<span class="w"> </span><span class="nv">$USER</span>
+</span></code></pre></div></p>
+</div>
+<h2 id="external-drive-integration">External Drive Integration</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">USB Drives (automount)</label><label for="__tabbed_1_2">Manual Mount</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>/media/user/external1<span class="w"> </span>~/docker/drives/disk1
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Create mount point:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/docker/drives/disk1
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Add to <code>/etc/fstab</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">UUID</span><span class="o">=</span>your-uuid-here<span class="w"> </span>/home/user/docker/drives/disk1<span class="w"> </span>ext4<span class="w"> </span>defaults<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="setup-script">Setup Script</h2>
+<div class="admonition tip">
+<p class="admonition-title">Automated Setup</p>
+<p>Save this script as <code>docker-setup.sh</code> and run with:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>docker-setup.sh
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>./docker-setup.sh
+</span></code></pre></div></p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Define base directories using $USER</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">DOCKER_APP_DATA</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/docker/appdata&quot;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nv">DOCKER_MEDIA</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/media&quot;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nv">DOCKER_DOWNLOADS</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/downloads&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nv">DOCKER_DRIVES</span><span class="o">=</span><span class="s2">&quot;/home/</span><span class="nv">$USER</span><span class="s2">/drives&quot;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># Create main directories</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_APP_DATA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_MEDIA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DOWNLOADS</span><span class="s2">&quot;</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DRIVES</span><span class="s2">&quot;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1"># Create media subdirectories</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_MEDIA</span><span class="s2">/&quot;</span><span class="o">{</span>tv,movies,books,audiobooks,extdisks<span class="o">}</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1"># Create downloads structure</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DOWNLOADS</span><span class="s2">/&quot;</span><span class="o">{</span>complete,incomplete<span class="o">}</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1"># Set permissions</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">1000</span>:1000<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_APP_DATA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">1000</span>:1000<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_MEDIA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">1000</span>:1000<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DOWNLOADS</span><span class="s2">&quot;</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>chown<span class="w"> </span>-R<span class="w"> </span><span class="m">1000</span>:1000<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DRIVES</span><span class="s2">&quot;</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_APP_DATA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_MEDIA</span><span class="s2">&quot;</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DOWNLOADS</span><span class="s2">&quot;</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKER_DRIVES</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<div class="admonition note">
+<p class="admonition-title">Recommendations</p>
+<ol>
+<li>
+<p><strong>Backup Configuration</strong>:</p>
+<ul>
+<li>Regularly backup the <code>appdata</code> directory</li>
+<li>Document mount points and UUIDs</li>
+</ul>
+</li>
+<li>
+<p><strong>Permission Management</strong>:</p>
+<ul>
+<li>Use consistent PUID/PGID across containers</li>
+<li>Maintain read/write permissions (755)</li>
+</ul>
+</li>
+<li>
+<p><strong>Drive Organization</strong>:</p>
+<ul>
+<li>Label external drives clearly</li>
+<li>Document drive mappings</li>
+<li>Use UUIDs in fstab instead of device names</li>
+</ul>
+</li>
+</ol>
+</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="admonition warning">
+<p class="admonition-title">Common Issues</p>
+<ul>
+<li><strong>Permission Denied</strong>: Verify user/group ownership</li>
+<li><strong>Mount Failures</strong>: Check fstab syntax and UUIDs</li>
+<li><strong>Space Issues</strong>: Monitor directory sizes with <code>du -h</code></li>
+</ul>
+</div>
 
 
 
@@ -1629,7 +1911,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2025</span>
   </span>
 
     
@@ -1640,14 +1922,12 @@
 
 
 
-  
 
 
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -1678,12 +1958,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../../../js/open_in_new_tab.js"></script>
+        <script src="../../../js/open_in_new_tab.js"></script>
       
     
   </body>
