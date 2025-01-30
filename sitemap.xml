@@ -69,6 +69,18 @@
          <lastmod>2025-01-30</lastmod>
     </url>
     <url>
+         <loc>https://bferg314.github.io/how-to/linux/ranger/ranger-usage/</loc>
+         <lastmod>2025-01-30</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/how-to/linux/ranger/setup-ranger/</loc>
+         <lastmod>2025-01-30</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/how-to/linux/rsync/rsync-guide/</loc>
+         <lastmod>2025-01-30</lastmod>
+    </url>
+    <url>
          <loc>https://bferg314.github.io/how-to/linux/samba/setup-samba/</loc>
          <lastmod>2025-01-30</lastmod>
     </url>
@@ -77,11 +89,11 @@
          <lastmod>2025-01-30</lastmod>
     </url>
     <url>
-         <loc>https://bferg314.github.io/how-to/ranger/setup-ranger/</loc>
+         <loc>https://bferg314.github.io/how-to/ssh/setup-ssh/</loc>
          <lastmod>2025-01-30</lastmod>
     </url>
     <url>
-         <loc>https://bferg314.github.io/how-to/ssh/setup-ssh/</loc>
+         <loc>https://bferg314.github.io/how-to/vim/vim-quickstart/</loc>
          <lastmod>2025-01-30</lastmod>
     </url>
     <url>
