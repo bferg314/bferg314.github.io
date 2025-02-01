@@ -1,0 +1,36 @@
+@media print {
+    /* Ensure page breaks are enforced */
+    h1.md-typeset, h2.md-typeset {
+        page-break-before: always !important;
+    }
+    
+    /* Prevent unwanted breaks */
+    pre.highlight, 
+    div.admonition,
+    blockquote.md-typeset {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Force breaks with custom class */
+    .page-break {
+        display: block !important;
+        page-break-after: always !important;
+        break-after: page !important; /* Modern syntax */
+    }
+    
+    /* Hide UI elements */
+    .md-header,
+    .md-tabs,
+    .md-sidebar,
+    .md-footer {
+        display: none !important;
+    }
+
+    /* Ensure content is visible */
+    .md-content {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
