@@ -830,13 +830,17 @@
 </ul>
 </div>
 <h3 id="mode-transitions">Mode Transitions</h3>
-<div class="mermaid">graph LR
-    A[Normal Mode] --&gt;|i, a, I, A| B[Insert Mode]
-    B --&gt;|Esc| A
-    A --&gt;|v, V, Ctrl+v| C[Visual Mode]
-    C --&gt;|Esc| A
-    A --&gt;|:| D[Command Mode]
-    D --&gt;|Enter| A</div>
+<div class="mermaid">graph TD
+    N[Normal Mode]
+    I[Insert Mode]
+    V[Visual Mode]
+    C[Command Mode]
+    N --&gt;|"i, a, I, A"| I
+    I --&gt;|Esc| N
+    N --&gt;|"v, V, Ctrl+v"| V
+    V --&gt;|Esc| N
+    N --&gt;|:| C
+    C --&gt;|Enter| N</div>
 <div class="page-break"></div>
 <h2 id="essential-commands">Essential Commands</h2>
 <div class="admonition abstract">
