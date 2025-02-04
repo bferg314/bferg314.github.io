@@ -5,6 +5,10 @@
          <lastmod>2025-02-04</lastmod>
     </url>
     <url>
+         <loc>https://bferg314.github.io/tags/</loc>
+         <lastmod>2025-02-04</lastmod>
+    </url>
+    <url>
          <loc>https://bferg314.github.io/blog/</loc>
          <lastmod>2025-02-04</lastmod>
     </url>
@@ -97,6 +101,14 @@
          <lastmod>2025-02-04</lastmod>
     </url>
     <url>
+         <loc>https://bferg314.github.io/how-to/windows/chocolatey-setup/</loc>
+         <lastmod>2025-02-04</lastmod>
+    </url>
+    <url>
+         <loc>https://bferg314.github.io/how-to/windows/essential-apps/</loc>
+         <lastmod>2025-02-04</lastmod>
+    </url>
+    <url>
          <loc>https://bferg314.github.io/how-to/windows/windows-tweaks/</loc>
          <lastmod>2025-02-04</lastmod>
     </url>
@@ -142,10 +154,6 @@
     </url>
     <url>
          <loc>https://bferg314.github.io/blog/archive/2024/</loc>
-         <lastmod>2025-02-04</lastmod>
-    </url>
-    <url>
-         <loc>https://bferg314.github.io/tags/</loc>
          <lastmod>2025-02-04</lastmod>
     </url>
 </urlset>
