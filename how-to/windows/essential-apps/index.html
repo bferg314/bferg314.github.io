@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Collection of useful Windows tweaks using PowerShell">
+        <meta name="description" content="Guide to installing essential software using Chocolatey">
       
       
       
-        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/windows-tweaks/">
+        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/essential-apps/">
       
       
-        <link rel="prev" href="../fun-with-fonts/">
+        <link rel="prev" href="../chocolatey-guide/">
       
       
-        <link rel="next" href="../../../writing/fiction/other-way-around/">
+        <link rel="next" href="../fun-with-fonts/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Windows Tweaks - Bryan's knowledge base</title>
+        <title>Essential Apps - Bryan's knowledge base</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windows-tweaks" class="md-skip">
+        <a href="#install-essential-software-using-chocolatey" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows Tweaks
+              Essential Apps
             
           </span>
         </div>
@@ -1454,10 +1454,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../essential-apps/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Essential Apps
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1468,6 +1490,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#software-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hyper-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyper Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firefox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obsidian
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow-launcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Launcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caffeine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caffeine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balena-etcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      balena Etcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mremoteng" class="md-nav__link">
+    <span class="md-ellipsis">
+      mRemoteNG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerShell Core
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1500,32 +1692,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Windows Tweaks
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../windows-tweaks/" class="md-nav__link">
         
   
   
@@ -1536,107 +1706,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desktop Tweaks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Desktop Tweaks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hide Recycle Bin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Context Menu Tweaks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Dark
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2074,76 +2143,145 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
+  <a href="#software-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Tweaks
+      Software Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Desktop Tweaks">
+    <nav class="md-nav" aria-label="Software Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
+  <a href="#hyper-terminal" class="md-nav__link">
     <span class="md-ellipsis">
-      Hide Recycle Bin
+      Hyper Terminal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
+  <a href="#firefox" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
+      Firefox
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Context Menu Tweaks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
+  <a href="#obsidian" class="md-nav__link">
     <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
+      Obsidian
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Dark
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
+  <a href="#flow-launcher" class="md-nav__link">
     <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
+      Flow Launcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      VS Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caffeine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caffeine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balena-etcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      balena Etcher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mremoteng" class="md-nav__link">
+    <span class="md-ellipsis">
+      mRemoteNG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerShell Core
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python3
     </span>
   </a>
   
@@ -2173,13 +2311,19 @@
       
       
       
-        <a href="../../../tags/#tag:customization" class="md-tag">customization</a>
+        <a href="../../../tags/#tag:chocolatey" class="md-tag">chocolatey</a>
       
     
       
       
       
-        <a href="../../../tags/#tag:powershell" class="md-tag">powershell</a>
+        <a href="../../../tags/#tag:essential-apps" class="md-tag">essential apps</a>
+      
+    
+      
+      
+      
+        <a href="../../../tags/#tag:productivity" class="md-tag">productivity</a>
       
     
       
@@ -2192,52 +2336,41 @@
 
 
 
-<h1 id="windows-tweaks">Windows Tweaks</h1>
-<div class="admonition info">
-<p class="admonition-title">About These Tweaks</p>
-<p>These PowerShell commands modify Windows settings that aren't easily accessible through the standard UI. Always run PowerShell as Administrator for these tweaks.</p>
-</div>
-<h2 id="desktop-tweaks">Desktop Tweaks</h2>
-<h3 id="hide-recycle-bin">Hide Recycle Bin</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{645FF040-5081-101B-9F08-00AA002F954E}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
+<h1 id="install-essential-software-using-chocolatey">Install Essential Software using Chocolatey</h1>
+<p>To install all the essential software listed, run the following command in an elevated PowerShell (Run as Administrator):</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">hyper</span> <span class="n">firefox</span> <span class="n">obsidian</span> <span class="n">flow-launcher</span> <span class="n">everything</span> <span class="n">vscode</span> <span class="n">caffeine</span> <span class="n">etcher</span> <span class="n">git</span> <span class="n">vim</span> <span class="n">mremoteng</span> <span class="n">powershell-core</span> <span class="n">docker-desktop</span> <span class="n">telegram</span> <span class="n">python311</span> <span class="n">bitwarden</span> <span class="n">-y</span>
 </span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To show the Recycle Bin again, run the same command but change the value to <code>0</code></p>
-</div>
-<h3 id="remove-learn-about-this-picture-icon">Remove "Learn about this picture" Icon</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{2cc5ca98-6485-489a-920e-b3e88a6ccce3}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To restore the "Learn about this picture" icon, change the value to <code>1</code></p>
-</div>
-<h2 id="context-menu-tweaks">Context Menu Tweaks</h2>
-<h3 id="restore-classic-right-click-menu">Restore Classic Right-Click Menu</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span> <span class="p">(!(</span><span class="nb">Test-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span><span class="p">))</span> <span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;(Default)&quot;</span> <span class="n">-Value</span> <span class="s2">&quot;&quot;</span> <span class="n">-Type</span> <span class="n">String</span>
-</span></code></pre></div>
-<h2 id="get-dark">Get Dark</h2>
-<h3 id="instantly-enables-dark-mode-for-user-even-on-windows-server">Instantly enables dark mode for user (even on windows server)</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">SystemUsesLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">AppsUseLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Apply Changes</p>
-<p>After running either command, you may need to:</p>
-<ol>
-<li>Restart Windows Explorer:
-    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Stop-Process</span> <span class="n">-Name</span> <span class="n">explorer</span> <span class="n">-Force</span>
-</span></code></pre></div></li>
-<li>Or simply restart your computer</li>
-</ol>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">System Modifications</p>
-<p>These tweaks modify the Windows Registry. While safe, always ensure you have a backup before making system changes.</p>
-</div>
+<h2 id="software-overview">Software Overview</h2>
+<h3 id="hyper-terminal"><a href="https://hyper.is/">Hyper Terminal</a></h3>
+<p>A sleek, extensible terminal built on Electron that leverages web technologies for customizability and performance. Supports plugins and themes to fit any workflow.</p>
+<h3 id="firefox"><a href="https://www.mozilla.org/firefox/">Firefox</a></h3>
+<p>A privacy-focused, open-source web browser known for speed, customizability, and support for modern web standards. Ideal for users who value security and freedom.</p>
+<h3 id="obsidian"><a href="https://obsidian.md/">Obsidian</a></h3>
+<p>A powerful markdown-based knowledge management tool designed for connected thinking. Great for creating and maintaining personal wikis and notes.</p>
+<h3 id="flow-launcher"><a href="https://github.com/Flow-Launcher/Flow.Launcher">Flow Launcher</a></h3>
+<p>A customizable, open-source productivity tool and application launcher for Windows. It supports plugins and quick file or web searches.</p>
+<h3 id="everything"><a href="https://www.voidtools.com/">Everything</a></h3>
+<p>A lightning-fast file search engine for Windows that provides instant results. Perfect for finding files by name or extension across large systems.</p>
+<h3 id="vs-code"><a href="https://code.visualstudio.com/">VS Code</a></h3>
+<p>A lightweight, versatile code editor with extensive language support and a rich ecosystem of extensions. Built by Microsoft, it's ideal for developers of all skill levels.</p>
+<h3 id="caffeine"><a href="https://www.zhornsoftware.co.uk/caffeine/">Caffeine</a></h3>
+<p>A simple utility that prevents your computer from sleeping or activating a screensaver. Perfect for uninterrupted presentations or long-running tasks.</p>
+<h3 id="balena-etcher"><a href="https://www.balena.io/etcher/">balena Etcher</a></h3>
+<p>A cross-platform tool for flashing OS images to SD cards and USB drives safely and easily. Streamlines the process for bootable media creation.</p>
+<h3 id="git"><a href="https://git-scm.com/">Git</a></h3>
+<p>A distributed version control system designed to handle projects of any size. Essential for software development and collaboration.</p>
+<h3 id="vim"><a href="https://www.vim.org/">Vim</a></h3>
+<p>A highly efficient, keyboard-driven text editor with robust features and extensive customizability. Loved by power users and developers.</p>
+<h3 id="mremoteng"><a href="https://mremoteng.org/">mRemoteNG</a></h3>
+<p>An open-source, multi-protocol remote connection manager. Supports RDP, SSH, and VNC, simplifying access to remote systems.</p>
+<h3 id="powershell-core"><a href="https://learn.microsoft.com/powershell/">PowerShell Core</a></h3>
+<p>A cross-platform automation and configuration management tool built on .NET. Ideal for scripting, task automation, and system management.</p>
+<h3 id="docker"><a href="https://www.docker.com/">Docker</a></h3>
+<p>A platform for developing, shipping, and running applications in lightweight containers. Simplifies deployment and environment consistency.</p>
+<h3 id="telegram"><a href="https://telegram.org/">Telegram</a></h3>
+<p>A fast, secure messaging app focused on privacy and features like file sharing and group chats. Available across multiple platforms.</p>
+<h3 id="python3"><a href="https://www.python.org/">Python3</a></h3>
+<p>A versatile, high-level programming language known for its readability and broad library support. Widely used in web development, data analysis, artificial intelligence, and more.</p>
 
 
 
@@ -2258,7 +2391,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2025 14:52:49 UTC">February 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 21:25:25 UTC">February 5, 2025</span>
   </span>
 
     

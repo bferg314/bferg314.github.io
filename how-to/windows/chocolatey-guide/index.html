@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Collection of useful Windows tweaks using PowerShell">
+        <meta name="description" content="Step-by-step guide to setting up and suing Chocolatey on Windows">
       
       
       
-        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/windows-tweaks/">
+        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/chocolatey-guide/">
       
       
-        <link rel="prev" href="../fun-with-fonts/">
+        <link rel="prev" href="../../vim/vim-quickstart/">
       
       
-        <link rel="next" href="../../../writing/fiction/other-way-around/">
+        <link rel="next" href="../essential-apps/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Windows Tweaks - Bryan's knowledge base</title>
+        <title>Chocolatey Guide - Bryan's knowledge base</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windows-tweaks" class="md-skip">
+        <a href="#chocolatey-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows Tweaks
+              Chocolatey Guide
             
           </span>
         </div>
@@ -1431,10 +1431,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../chocolatey-guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chocolatey Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1445,6 +1467,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Chocolatey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-installed-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Installed Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-package-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Package Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-specific-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Specific Versions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-and-importing-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting and Importing Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-local-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up a Local Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-chocolatey-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Chocolatey GUI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1500,32 +1692,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Windows Tweaks
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../windows-tweaks/" class="md-nav__link">
         
   
   
@@ -1536,107 +1706,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Desktop Tweaks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Desktop Tweaks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hide Recycle Bin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Context Menu Tweaks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Dark
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2074,28 +2143,127 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Tweaks
+      Prerequisites
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Desktop Tweaks">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Chocolatey
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
+  <a href="#installing-a-package" class="md-nav__link">
     <span class="md-ellipsis">
-      Hide Recycle Bin
+      Installing a Package
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
+  <a href="#upgrading-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
+      Upgrading Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalling Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-installed-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Installed Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-for-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-package-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Package Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-specific-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Specific Versions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Package
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting-and-importing-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting and Importing Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-local-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up a Local Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-chocolatey-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Chocolatey GUI
     </span>
   </a>
   
@@ -2107,50 +2275,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Context Menu Tweaks
+      Additional Resources
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Dark
+      Conclusion
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2173,13 +2311,19 @@
       
       
       
-        <a href="../../../tags/#tag:customization" class="md-tag">customization</a>
+        <a href="../../../tags/#tag:chocolatey" class="md-tag">chocolatey</a>
       
     
       
       
       
-        <a href="../../../tags/#tag:powershell" class="md-tag">powershell</a>
+        <a href="../../../tags/#tag:package-manager" class="md-tag">package manager</a>
+      
+    
+      
+      
+      
+        <a href="../../../tags/#tag:setup" class="md-tag">setup</a>
       
     
       
@@ -2192,52 +2336,87 @@
 
 
 
-<h1 id="windows-tweaks">Windows Tweaks</h1>
-<div class="admonition info">
-<p class="admonition-title">About These Tweaks</p>
-<p>These PowerShell commands modify Windows settings that aren't easily accessible through the standard UI. Always run PowerShell as Administrator for these tweaks.</p>
+<h1 id="chocolatey-guide">Chocolatey Guide</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before installing Chocolatey, you need to set the execution policy for PowerShell scripts. Open PowerShell as an administrator and run the following command:</p>
 </div>
-<h2 id="desktop-tweaks">Desktop Tweaks</h2>
-<h3 id="hide-recycle-bin">Hide Recycle Bin</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{645FF040-5081-101B-9F08-00AA002F954E}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
 </span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To show the Recycle Bin again, run the same command but change the value to <code>0</code></p>
-</div>
-<h3 id="remove-learn-about-this-picture-icon">Remove "Learn about this picture" Icon</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{2cc5ca98-6485-489a-920e-b3e88a6ccce3}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
+<h2 id="installing-chocolatey">Installing Chocolatey</h2>
+<p>To install Chocolatey, open an elevated PowerShell (Run as Administrator) and run the following command:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span> <span class="nb">iex </span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://community.chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
 </span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To restore the "Learn about this picture" icon, change the value to <code>1</code></p>
-</div>
-<h2 id="context-menu-tweaks">Context Menu Tweaks</h2>
-<h3 id="restore-classic-right-click-menu">Restore Classic Right-Click Menu</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span> <span class="p">(!(</span><span class="nb">Test-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span><span class="p">))</span> <span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;(Default)&quot;</span> <span class="n">-Value</span> <span class="s2">&quot;&quot;</span> <span class="n">-Type</span> <span class="n">String</span>
-</span></code></pre></div>
-<h2 id="get-dark">Get Dark</h2>
-<h3 id="instantly-enables-dark-mode-for-user-even-on-windows-server">Instantly enables dark mode for user (even on windows server)</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">SystemUsesLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">AppsUseLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Apply Changes</p>
-<p>After running either command, you may need to:</p>
-<ol>
-<li>Restart Windows Explorer:
-    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Stop-Process</span> <span class="n">-Name</span> <span class="n">explorer</span> <span class="n">-Force</span>
-</span></code></pre></div></li>
-<li>Or simply restart your computer</li>
-</ol>
-</div>
 <div class="admonition warning">
-<p class="admonition-title">System Modifications</p>
-<p>These tweaks modify the Windows Registry. While safe, always ensure you have a backup before making system changes.</p>
+<p class="admonition-title">Warning</p>
+<p>Ensure you have administrative privileges when running the PowerShell commands.</p>
 </div>
+<h2 id="main-commands">Main Commands</h2>
+<h3 id="installing-a-package">Installing a Package</h3>
+<p>To install a package, use the <code>choco install</code> command followed by the package name. For example, to install Google Chrome:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">googlechrome</span>
+</span></code></pre></div>
+<p>You can install multiple packages at once by separating them with spaces:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">googlechrome</span> <span class="n">firefox</span> <span class="n">7zip</span>
+</span></code></pre></div>
+<h3 id="upgrading-packages">Upgrading Packages</h3>
+<p>To upgrade all installed packages to their latest versions, use:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">choco</span> <span class="n">upgrade</span> <span class="n">all</span>
+</span></code></pre></div>
+<p>To upgrade a specific package:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">choco</span> <span class="n">upgrade</span> <span class="n">googlechrome</span>
+</span></code></pre></div>
+<h3 id="uninstalling-packages">Uninstalling Packages</h3>
+<p>To uninstall a package, use the <code>choco uninstall</code> command followed by the package name:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">choco</span> <span class="n">uninstall</span> <span class="n">googlechrome</span>
+</span></code></pre></div>
+<h3 id="listing-installed-packages">Listing Installed Packages</h3>
+<p>To list all installed packages, use:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">choco</span> <span class="n">list</span>
+</span></code></pre></div>
+<h3 id="searching-for-packages">Searching for Packages</h3>
+<p>To search for a package, use the <code>choco search</code> command followed by the package name or a keyword:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">choco</span> <span class="n">search</span> <span class="n">chrome</span>
+</span></code></pre></div>
+<h3 id="viewing-package-information">Viewing Package Information</h3>
+<p>To view detailed information about a package, use the <code>choco info</code> command followed by the package name:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">choco</span> <span class="n">info</span> <span class="n">googlechrome</span>
+</span></code></pre></div>
+<h3 id="installing-specific-versions">Installing Specific Versions</h3>
+<p>To install a specific version of a package, use the <code>--version</code> flag:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">googlechrome</span> <span class="p">-</span><span class="n">-version</span><span class="p">=</span><span class="n">91</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4472</span><span class="p">.</span><span class="n">124</span>
+</span></code></pre></div>
+<h3 id="creating-a-package">Creating a Package</h3>
+<p>To create a new Chocolatey package, use the <code>choco new</code> command followed by the package name:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">choco</span> <span class="n">new</span> <span class="n">mypackage</span>
+</span></code></pre></div>
+<p>This will create a folder with the necessary files to build your package. Edit the <code>.nuspec</code> file to define your package's metadata.</p>
+<h3 id="exporting-and-importing-packages">Exporting and Importing Packages</h3>
+<p>To export a list of installed packages to a file:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">choco</span> <span class="n">export</span> <span class="p">-</span><span class="n">-output</span><span class="o">-file</span><span class="p">=</span><span class="n">packages</span><span class="p">.</span><span class="n">config</span>
+</span></code></pre></div>
+<p>To install packages from a file:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">packages</span><span class="p">.</span><span class="n">config</span>
+</span></code></pre></div>
+<h3 id="setting-up-a-local-repository">Setting Up a Local Repository</h3>
+<p>To set up a local repository, create a folder to store your packages and configure Chocolatey to use it:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">choco</span> <span class="n">source</span> <span class="n">add</span> <span class="n">-n</span><span class="p">=</span><span class="n">local</span> <span class="n">-s</span><span class="p">=</span><span class="s2">&quot;C:\path\to\your\repository&quot;</span>
+</span></code></pre></div>
+<p>You can now add packages to this folder and install them using Chocolatey.</p>
+<h3 id="using-chocolatey-gui">Using Chocolatey GUI</h3>
+<p>For a more user-friendly experience, you can install Chocolatey GUI:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">choco</span> <span class="n">install</span> <span class="n">chocolateygui</span>
+</span></code></pre></div>
+<p>This provides a graphical interface for managing your Chocolatey packages.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Chocolatey GUI can be especially helpful for users who prefer a visual interface over command-line operations.</p>
+</div>
+<h2 id="additional-resources">Additional Resources</h2>
+<p>For more information and advanced usage, refer to the <a href="https://docs.chocolatey.org/en-us/">Chocolatey documentation</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>These tips and tricks should help you get started with Chocolatey and make the most of its features. Happy package managing!</p>
 
 
 
@@ -2258,7 +2437,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2025 14:52:49 UTC">February 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 21:25:25 UTC">February 5, 2025</span>
   </span>
 
     

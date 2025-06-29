@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Collection of useful Windows tweaks using PowerShell">
+        <meta name="description" content="Guide on installing and using new fonts in terminal emulators on Windows">
       
       
       
-        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/windows-tweaks/">
+        <link rel="canonical" href="https://bferg314.github.io/how-to/windows/fun-with-fonts/">
       
       
-        <link rel="prev" href="../fun-with-fonts/">
+        <link rel="prev" href="../essential-apps/">
       
       
-        <link rel="next" href="../../../writing/fiction/other-way-around/">
+        <link rel="next" href="../windows-tweaks/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Windows Tweaks - Bryan's knowledge base</title>
+        <title>Fun with Fonts - Bryan's knowledge base</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#windows-tweaks" class="md-skip">
+        <a href="#fun-with-fonts" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows Tweaks
+              Fun with Fonts
             
           </span>
         </div>
@@ -1477,29 +1477,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../fun-with-fonts/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Fun with Fonts
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1517,7 +1494,7 @@
   
   
   <span class="md-ellipsis">
-    Windows Tweaks
+    Fun with Fonts
     
   </span>
   
@@ -1530,7 +1507,7 @@
   
   
   <span class="md-ellipsis">
-    Windows Tweaks
+    Fun with Fonts
     
   </span>
   
@@ -1553,28 +1530,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
+  <a href="#installing-new-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Tweaks
+      Installing New Fonts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Desktop Tweaks">
+    <nav class="md-nav" aria-label="Installing New Fonts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
+  <a href="#step-1-download-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Hide Recycle Bin
+      Step 1: Download Fonts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
+  <a href="#step-2-install-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
+      Step 2: Install Fonts
     </span>
   </a>
   
@@ -1586,19 +1563,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
+  <a href="#viewing-installed-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Context Menu Tweaks
+      Viewing Installed Fonts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
+    <nav class="md-nav" aria-label="Viewing Installed Fonts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
+  <a href="#option-1-powershell" class="md-nav__link">
     <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
+      Option 1: PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-windows-fonts-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Windows Fonts Settings
     </span>
   </a>
   
@@ -1610,26 +1596,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
+  <a href="#updating-vs-code-to-use-the-new-font" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Dark
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
+      Updating VS Code to Use the New Font
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#updating-hyper-terminal-to-use-the-new-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating Hyper Terminal to Use the New Font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
   
 </li>
       
@@ -1637,6 +1635,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-tweaks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows Tweaks
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2074,28 +2095,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#desktop-tweaks" class="md-nav__link">
+  <a href="#installing-new-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Tweaks
+      Installing New Fonts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Desktop Tweaks">
+    <nav class="md-nav" aria-label="Installing New Fonts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hide-recycle-bin" class="md-nav__link">
+  <a href="#step-1-download-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Hide Recycle Bin
+      Step 1: Download Fonts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-learn-about-this-picture-icon" class="md-nav__link">
+  <a href="#step-2-install-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove "Learn about this picture" Icon
+      Step 2: Install Fonts
     </span>
   </a>
   
@@ -2107,19 +2128,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#context-menu-tweaks" class="md-nav__link">
+  <a href="#viewing-installed-fonts" class="md-nav__link">
     <span class="md-ellipsis">
-      Context Menu Tweaks
+      Viewing Installed Fonts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Context Menu Tweaks">
+    <nav class="md-nav" aria-label="Viewing Installed Fonts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#restore-classic-right-click-menu" class="md-nav__link">
+  <a href="#option-1-powershell" class="md-nav__link">
     <span class="md-ellipsis">
-      Restore Classic Right-Click Menu
+      Option 1: PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-windows-fonts-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Windows Fonts Settings
     </span>
   </a>
   
@@ -2131,26 +2161,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-dark" class="md-nav__link">
+  <a href="#updating-vs-code-to-use-the-new-font" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Dark
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get Dark">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instantly-enables-dark-mode-for-user-even-on-windows-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instantly enables dark mode for user (even on windows server)
+      Updating VS Code to Use the New Font
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#updating-hyper-terminal-to-use-the-new-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating Hyper Terminal to Use the New Font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
   
 </li>
       
@@ -2173,13 +2215,25 @@
       
       
       
+        <a href="../../../tags/#tag:hyper-terminal" class="md-tag">Hyper Terminal</a>
+      
+    
+      
+      
+      
+        <a href="../../../tags/#tag:vs-code" class="md-tag">VS Code</a>
+      
+    
+      
+      
+      
         <a href="../../../tags/#tag:customization" class="md-tag">customization</a>
       
     
       
       
       
-        <a href="../../../tags/#tag:powershell" class="md-tag">powershell</a>
+        <a href="../../../tags/#tag:fonts" class="md-tag">fonts</a>
       
     
       
@@ -2192,52 +2246,84 @@
 
 
 
-<h1 id="windows-tweaks">Windows Tweaks</h1>
-<div class="admonition info">
-<p class="admonition-title">About These Tweaks</p>
-<p>These PowerShell commands modify Windows settings that aren't easily accessible through the standard UI. Always run PowerShell as Administrator for these tweaks.</p>
-</div>
-<h2 id="desktop-tweaks">Desktop Tweaks</h2>
-<h3 id="hide-recycle-bin">Hide Recycle Bin</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{645FF040-5081-101B-9F08-00AA002F954E}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To show the Recycle Bin again, run the same command but change the value to <code>0</code></p>
-</div>
-<h3 id="remove-learn-about-this-picture-icon">Remove "Learn about this picture" Icon</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;{2cc5ca98-6485-489a-920e-b3e88a6ccce3}&quot;</span> <span class="n">-Type</span> <span class="n">DWord</span> <span class="n">-Value</span> <span class="n">1</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Revert Change</p>
-<p>To restore the "Learn about this picture" icon, change the value to <code>1</code></p>
-</div>
-<h2 id="context-menu-tweaks">Context Menu Tweaks</h2>
-<h3 id="restore-classic-right-click-menu">Restore Classic Right-Click Menu</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span> <span class="p">(!(</span><span class="nb">Test-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span><span class="p">))</span> <span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Force</span> <span class="p">|</span> <span class="nb">Out-Null</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;(Default)&quot;</span> <span class="n">-Value</span> <span class="s2">&quot;&quot;</span> <span class="n">-Type</span> <span class="n">String</span>
-</span></code></pre></div>
-<h2 id="get-dark">Get Dark</h2>
-<h3 id="instantly-enables-dark-mode-for-user-even-on-windows-server">Instantly enables dark mode for user (even on windows server)</h3>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">SystemUsesLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">New-ItemProperty</span> <span class="n">-Path</span> <span class="s2">&quot;HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize&quot;</span> <span class="n">-Name</span> <span class="n">AppsUseLightTheme</span> <span class="n">-Value</span> <span class="n">0</span> <span class="n">-Type</span> <span class="n">Dword</span> <span class="n">-Force</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Apply Changes</p>
-<p>After running either command, you may need to:</p>
+<h1 id="fun-with-fonts">Fun with Fonts</h1>
+<h2 id="installing-new-fonts">Installing New Fonts</h2>
+<h3 id="step-1-download-fonts">Step 1: Download Fonts</h3>
+<p>Visit the <a href="https://www.nerdfonts.com/font-downloads">Nerd Fonts</a> website to download a variety of fonts designed for developers. Another good site for programmer fonts is <a href="https://www.programmingfonts.org/">Programming Fonts</a>.</p>
+<h3 id="step-2-install-fonts">Step 2: Install Fonts</h3>
+<p>After downloading the font files (usually in <code>.zip</code> format), extract them and install the fonts by following these steps:</p>
 <ol>
-<li>Restart Windows Explorer:
-    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Stop-Process</span> <span class="n">-Name</span> <span class="n">explorer</span> <span class="n">-Force</span>
-</span></code></pre></div></li>
-<li>Or simply restart your computer</li>
+<li>Open PowerShell as an administrator.</li>
+<li>Navigate to the directory where the font files are located.</li>
+<li>Run the following command to install the fonts:</li>
 </ol>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">echo </span><span class="s2">&quot;Install fonts&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">$fonts</span> <span class="p">=</span> <span class="p">(</span><span class="nb">New-Object</span> <span class="n">-ComObject</span> <span class="n">Shell</span><span class="p">.</span><span class="n">Application</span><span class="p">).</span><span class="n">Namespace</span><span class="p">(</span><span class="n">0x14</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">foreach</span> <span class="p">(</span><span class="nv">$file</span> <span class="k">in</span> <span class="nb">gci </span><span class="p">*.</span><span class="n">ttf</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nv">$fileName</span> <span class="p">=</span> <span class="nv">$file</span><span class="p">.</span><span class="n">Name</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span><span class="p">(</span><span class="nb">Test-Path</span> <span class="n">-Path</span> <span class="s2">&quot;C:\Windows\fonts\$fileName&quot;</span> <span class="p">))</span> <span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="nb">echo </span><span class="nv">$fileName</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="nb">dir </span><span class="nv">$file</span> <span class="p">|</span> <span class="p">%{</span> <span class="nv">$fonts</span><span class="p">.</span><span class="n">CopyHere</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">fullname</span><span class="p">)</span> <span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">cp </span><span class="p">*.</span><span class="n">ttf</span> <span class="n">c</span><span class="p">:\</span><span class="n">windows</span><span class="p">\</span><span class="n">fonts</span><span class="p">\</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure you have administrative privileges when running the PowerShell commands.</p>
 </div>
+<p>Alternatively, you can install fonts by simply double-clicking the <code>.ttf</code> file and clicking the "Install" button.</p>
+<h2 id="viewing-installed-fonts">Viewing Installed Fonts</h2>
+<h3 id="option-1-powershell">Option 1: PowerShell</h3>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="no">[void] [System.Reflection.Assembly]</span><span class="p">::</span><span class="n">LoadWithPartialName</span><span class="p">(</span><span class="s2">&quot;System.Drawing&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">InstalledFontCollection</span><span class="p">).</span><span class="n">Families</span>
+</span></code></pre></div>
+<h3 id="option-2-windows-fonts-settings">Option 2: Windows Fonts Settings</h3>
+<p>To view the installed fonts, open the Windows Fonts settings:</p>
+<ol>
+<li>Press <code>Win + R</code> to open the Run dialog.</li>
+<li>Type <code>control fonts</code> or <code>fonts</code> and press Enter.</li>
+</ol>
 <div class="admonition warning">
-<p class="admonition-title">System Modifications</p>
-<p>These tweaks modify the Windows Registry. While safe, always ensure you have a backup before making system changes.</p>
+<p class="admonition-title">Warning</p>
+<p>After installing new fonts, you may need to restart your terminal emulator or code editor for the changes to take effect.</p>
 </div>
+<h2 id="updating-vs-code-to-use-the-new-font">Updating VS Code to Use the New Font</h2>
+<ol>
+<li>Open VS Code.</li>
+<li>Go to <code>File</code> &gt; <code>Preferences</code> &gt; <code>Settings</code>.</li>
+<li>Search for <code>Font Family</code>.</li>
+<li>Add the name of your new font to the <code>Editor: Font Family</code> setting. For example:</li>
+</ol>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;editor.fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fira Code, Consolas, &#39;Courier New&#39;, monospace&quot;</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can list multiple fonts as fallbacks in case the primary font is not available.</p>
+</div>
+<h2 id="updating-hyper-terminal-to-use-the-new-font">Updating Hyper Terminal to Use the New Font</h2>
+<ol>
+<li>Open the Hyper Terminal configuration file by running the following command in Hyper:</li>
+</ol>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hyper<span class="w"> </span>config
+</span></code></pre></div>
+<ol>
+<li>In the configuration file, find the <code>fontFamily</code> setting and update it with the name of your new font. For example:</li>
+</ol>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">// ...existing code...</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nx">fontFamily</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&quot;Fira Code&quot;, &quot;Consolas&quot;, &quot;Courier New&quot;, monospace&#39;</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// ...existing code...</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="c1">// ...existing code...</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">};</span>
+</span></code></pre></div>
+<h2 id="additional-resources">Additional Resources</h2>
+<p>For more information on customizing your terminal and code editor, refer to the official documentation for <a href="https://code.visualstudio.com/docs/getstarted/settings">VS Code</a> and <a href="https://hyper.is/#cfg">Hyper Terminal</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Installing and customizing fonts can greatly enhance your development experience. By following this guide, you can easily install new fonts and configure your favorite tools to use them. Enjoy your new, stylish coding environment!</p>
 
 
 
@@ -2258,7 +2344,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2025 14:52:49 UTC">February 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 21:25:25 UTC">February 5, 2025</span>
   </span>
 
     
