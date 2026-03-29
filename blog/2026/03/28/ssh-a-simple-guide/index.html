@@ -12,30 +12,32 @@
         <meta name="author" content="Bryan">
       
       
-        <link rel="canonical" href="https://bferg314.github.io/blog/archive/2024/">
+        <link rel="canonical" href="https://bferg314.github.io/blog/2026/03/28/ssh-a-simple-guide/">
       
+      
+        <link rel="prev" href="../../../02/01/almost-a-year-has-passed/">
       
       
       
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>2024 - Bryan's knowledge base</title>
+        <title>SSH: A simple guide - Bryan's knowledge base</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -54,11 +56,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/print.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/print.css">
     
-      <link rel="stylesheet" href="../../../css/open_in_new_tab.css">
+      <link rel="stylesheet" href="../../../../../css/open_in_new_tab.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#ssh-a-simple-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +101,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-header__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -119,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              SSH: A simple guide
             
           </span>
         </div>
@@ -236,7 +238,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -245,7 +249,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
+    <a href="../../../../.." title="Bryan&#39;s knowledge base" class="md-nav__button md-logo" aria-label="Bryan's knowledge base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
@@ -275,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -299,12 +303,14 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   
@@ -425,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/certs/localCACerts/" class="md-nav__link">
+      <a href="../../../../../how-to/certs/localCACerts/" class="md-nav__link">
         
   
   
@@ -508,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/docker/folder-setup/" class="md-nav__link">
+      <a href="../../../../../how-to/docker/folder-setup/" class="md-nav__link">
         
   
   
@@ -536,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/docker/on-linux/" class="md-nav__link">
+      <a href="../../../../../how-to/docker/on-linux/" class="md-nav__link">
         
   
   
@@ -564,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/docker/on-windows/" class="md-nav__link">
+      <a href="../../../../../how-to/docker/on-windows/" class="md-nav__link">
         
   
   
@@ -694,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/disks/formatting/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/disks/formatting/" class="md-nav__link">
         
   
   
@@ -722,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/disks/types/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/disks/types/" class="md-nav__link">
         
   
   
@@ -805,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/ranger/setup-ranger/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/ranger/setup-ranger/" class="md-nav__link">
         
   
   
@@ -833,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/ranger/ranger-usage/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/ranger/ranger-usage/" class="md-nav__link">
         
   
   
@@ -869,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/rsync/rsync-guide/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/rsync/rsync-guide/" class="md-nav__link">
         
   
   
@@ -897,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
+      <a href="../../../../../how-to/linux/samba/setup-samba/" class="md-nav__link">
         
   
   
@@ -980,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
+      <a href="../../../../../how-to/mkdocs/setup-mkdocs/" class="md-nav__link">
         
   
   
@@ -1063,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/ssh/setup-ssh/" class="md-nav__link">
+      <a href="../../../../../how-to/ssh/setup-ssh/" class="md-nav__link">
         
   
   
@@ -1146,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/vim/vim-quickstart/" class="md-nav__link">
+      <a href="../../../../../how-to/vim/vim-quickstart/" class="md-nav__link">
         
   
   
@@ -1229,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/windows/chocolatey-guide/" class="md-nav__link">
+      <a href="../../../../../how-to/windows/chocolatey-guide/" class="md-nav__link">
         
   
   
@@ -1257,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/windows/essential-apps/" class="md-nav__link">
+      <a href="../../../../../how-to/windows/essential-apps/" class="md-nav__link">
         
   
   
@@ -1285,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/windows/fun-with-fonts/" class="md-nav__link">
+      <a href="../../../../../how-to/windows/fun-with-fonts/" class="md-nav__link">
         
   
   
@@ -1313,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../how-to/windows/windows-tweaks/" class="md-nav__link">
+      <a href="../../../../../how-to/windows/windows-tweaks/" class="md-nav__link">
         
   
   
@@ -1403,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/why_commissions/" class="md-nav__link">
+      <a href="../../../../../commissions/why_commissions/" class="md-nav__link">
         
   
   
@@ -1478,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/fiction/the-clockmaker/" class="md-nav__link">
+      <a href="../../../../../commissions/fiction/the-clockmaker/" class="md-nav__link">
         
   
   
@@ -1506,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/fiction/other-way-around/" class="md-nav__link">
+      <a href="../../../../../commissions/fiction/other-way-around/" class="md-nav__link">
         
   
   
@@ -1534,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
+      <a href="../../../../../commissions/fiction/the-lair-of-the-dragon-king/" class="md-nav__link">
         
   
   
@@ -1617,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/reality/cyclical-vs-linear-time/" class="md-nav__link">
+      <a href="../../../../../commissions/reality/cyclical-vs-linear-time/" class="md-nav__link">
         
   
   
@@ -1645,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/reality/history-of-endurance-running/" class="md-nav__link">
+      <a href="../../../../../commissions/reality/history-of-endurance-running/" class="md-nav__link">
         
   
   
@@ -1673,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/reality/shades-of-creative-agency/" class="md-nav__link">
+      <a href="../../../../../commissions/reality/shades-of-creative-agency/" class="md-nav__link">
         
   
   
@@ -1701,7 +1707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/reality/the-joy-of-creating/" class="md-nav__link">
+      <a href="../../../../../commissions/reality/the-joy-of-creating/" class="md-nav__link">
         
   
   
@@ -1784,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/ideas/the-5-human-domestications/" class="md-nav__link">
+      <a href="../../../../../commissions/ideas/the-5-human-domestications/" class="md-nav__link">
         
   
   
@@ -1812,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/ideas/the-5-life-forms/" class="md-nav__link">
+      <a href="../../../../../commissions/ideas/the-5-life-forms/" class="md-nav__link">
         
   
   
@@ -1895,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../commissions/philosophy/the-only-thing-we-could-be-doing/" class="md-nav__link">
+      <a href="../../../../../commissions/philosophy/the-only-thing-we-could-be-doing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../creations/code/" class="md-nav__link">
+      <a href="../../../../../creations/code/" class="md-nav__link">
         
   
   
@@ -2013,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../creations/music/" class="md-nav__link">
+      <a href="../../../../../creations/music/" class="md-nav__link">
         
   
   
@@ -2048,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tags/" class="md-nav__link">
+      <a href="../../../../../tags/" class="md-nav__link">
         
   
   
@@ -2076,6 +2082,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2088,69 +2096,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#happy-friday-the-13th" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Happy Friday the 13th
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Is It Still Mine? Wrestling with AI and the Joy of Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-sapiens" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading Sapiens
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creative-agency" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creative Agency
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fun-with-next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fun with next steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2158,178 +2103,112 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-12-13 00:00:00+00:00">December 13, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-03-28 00:00:00+00:00" class="md-ellipsis">March 28, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              1 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
           
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="happy-friday-the-13th"><a class="toclink" href="../../2024/12/13/happy-friday-the-13th/">Happy Friday the 13th</a></h2>
-<p>Figured I would add <a href="../../../commissions/fiction/the-clockmaker/">The Clockmaker</a> to the pile of stuff I have out here. It's one of my favorite generations. I spent quite a bit of time guiding and tweaking this one. Deinitely material close to my heart.</p>
-<p>ChatGPT has a memory, and once you have it pretty well filled up with stuff about you, it can really run with what it thinks you are after. I have since cleared it's memory and started a new adventure, but it is neat building that relationship, then generating some stuff based on that. We are around the corner from the era of really impressive <a href="https://en.wikipedia.org/wiki/Intelligent_agent">intelligent agents</a>. And I don't think people realize what that will mean for them... These assistants with amazing long term memories about all of our interations will help us interact with and create our world. </p>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-27 00:00:00+00:00">November 27, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation"><a class="toclink" href="../../2024/11/27/is-it-still-mine-wrestling-with-ai-and-the-joy-of-creation/">Is It Still Mine? Wrestling with AI and the Joy of Creation</a></h2>
-<p>I do quite a bit of chatting with ChatGPT and Claude. They are both sounding boards for philosophical and creative ideas that would bore most of the people I am surrounded with. Certainly not the fault of those lucky enough to interact with me every day, but I’m sure I already sound like a broken record on some topics, and other topics are just not what they are interested in. Funny how your interests and tastes can go down paths that diverge so much from your people.</p>
-<p>It's true that <a href="https://allpoetry.com/No-man-is-an-island">No Man is an Island</a>, but at the same time, <a href="https://www.youtube.com/watch?v=lyu7v7nWzfo">all humans are truly islands</a>. We are shaped by the currents that surround us: our connections, our tools, and the ideas that drift into our lives. No one creates in isolation, even if it sometimes feels that way. AI has become one of those currents for me, bridging the gaps between my isolated interests and offering a collaborative partner where none existed before.</p>
-<p>That being said, I’ve been wrestling with the idea of creating alongside AI. It feels both liberating and disorienting—how much of what I produce is truly mine? But I’ve come to realize that the joy of creation doesn’t depend on where the spark comes from. It’s in the act itself: shaping ideas, refining thoughts, and sharing something new with the world. Of course, there are valid concerns about how this changes the creative landscape, particularly for those whose livelihoods depend on traditional forms of creation. But every leap in technology—from the printing press to digital media—has reshaped the creative world, often in ways we couldn’t predict. While it’s natural to resist change, perhaps the best response is to embrace it and let it inspire us to create more, not less.</p>
-<p>Here are some additional thoughts on the <a href="../../../commissions/reality/the-joy-of-creating/">joy of creating</a>.</p>
-<p>Imagine a world where technology and society are arranged to support the simple joy of creating for its own sake. A world where we could explore every rabbit hole that sparks our curiosity without guilt or hesitation, hum a tune and have it transformed into a song we could treasure for months, or turn a fleeting idea for a film into something our family could watch that evening. AI offers a glimpse of this possibility: tools that amplify our creativity rather than replace it. It's not a perfect system, but it's a step toward a future where creation becomes as natural and accessible as breathing.</p>
-<p>Ideally, all our creative endeavors would purely be for the sake of creating, if only society and technology could be arranged in a way to support that wonderful dream. Until then, we can lean into the tools we have, embrace the joy of the process, and share what we create, no matter where it comes from or how it takes shape.</p>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-22 00:00:00+00:00">November 22, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="reading-sapiens"><a class="toclink" href="../../2024/11/22/reading-sapiens/">Reading Sapiens</a></h2>
-<p>I am currently reading Sapiens, by <a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Noah Harari</a> and it is quite enlightening. I have never thought about human history on these levels and it has sparked quite a few thought experiments. Like <a href="../../../commissions/ideas/the-5-human-domestications/">what if humans came across other scenarios similar to the agricultural revolution</a>? <a href="../../../commissions/ideas/the-5-life-forms/">What other life forms could be possible</a>? Looking forward to the rest of his books too!</p>
-<p>I also added a commission tag to all the things that I worked with AI on. Not like anybody will ever see this stuff, but I guess some sort of transparency is good.</p>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-13 00:00:00+00:00">November 13, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="creative-agency"><a class="toclink" href="../../2024/11/13/creative-agency/">Creative Agency</a></h2>
-<p>Some thoughts on creative agency, as I use AI more and more in my daily life. I really have been much more inspired than ever to gather my thoughts regardless of what magnifies them and spits out something with more depth.</p>
-<p>Here are some charts and thoughts on the <a href="../../../commissions/reality/shades-of-creative-agency/">Shades of Creative Agency</a></p>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-12 00:00:00+00:00">November 12, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fun-with-next-steps"><a class="toclink" href="../../2024/11/12/fun-with-next-steps/">Fun with next steps</a></h2>
-<p>Constant little tweaks. Plenty of ideas. I guess I just need to keep going.</p>
-<p>The ongoing battle of setting up the things. I have a bunch of stories that I found. Those could be fun too. Might as well get everything out there. I'll start with <a href="../../../commissions/fiction/the-lair-of-the-dragon-king/">Lair of the Dragon King</a>. I like that one.</p>
-    
-    
-  </div>
-</article>
-      
+    <article class="md-content__inner md-typeset">
       
         
-          
+  
 
 
 
-<nav class="md-pagination">
-  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a>
-</nav>
-        
+  
+  
+
+
+<h1 id="ssh-a-simple-guide">SSH: A simple guide</h1>
+<p>Sometimes I just don't take the time to really understand something for a really long time. SSH is one of those things. And i think I finally get the whole enchilada. Read Claude's wise explanation here: <a href="../../../../../how-to/ssh/ssh-simplified/">SSH Simplified</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
       
-    </div>
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 29, 2026 03:56:17 UTC">March 29, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+      
+    </article>
   </div>
 
           
@@ -2369,12 +2248,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../js/open_in_new_tab.js"></script>
+        <script src="../../../../../js/open_in_new_tab.js"></script>
       
     
   </body>
